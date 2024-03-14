@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a61a37844a.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+  * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+
+
+  #navlist {
+    margin-left: 500px;
+    padding: 5PX;
+  }
+
+  #list_mg {
+    margin-left: 50px;
+    color: rgb(11, 11, 11);
+  }
+
+  #list_mg:hover {
+    color: blue;
+
+  }
+
+  #bkclor {
+    background-color: rgb(185, 181, 181);
+    width: 100%;
+    /* background-color: white; */
+  }
+
+
+
+  #locationdiv {
+    background-color: rgb(7, 107, 248);
+    height: 100px;
+  }
+
+  #social {
+    display: flex;
+    list-style: none;
+    margin-right: 160px;
+    margin-top: -5px;
+  }
+
+  #so_icon {
+    margin-left: 25px;
+  }
+
+  #soicial {
+    height: 40px;
+    background-color: rgb(99, 11, 222);
+  }
+
+  #cial {
+    height: 40px;
+    background-color: rgb(99, 11, 222);
+  }
+
+  #map {
+    font-size: 12px;
+    margin-top: -25px;
+    margin-left: 0px;
+
+    color: white;
+  }
+
+
+
+  #image_div {
+
+    background-image: url(" pexels-pixabay-274060.jpg");
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+
+  #text {
+    text-align: center;
+    padding: 25px;
+    position: absolute;
+    top: 25%;
+    color: white;
+
+    background: transparent;
+    background-color: rgba(255, 255, 255, .2);
+
+
+  }
+
+  #maincard {
+
+    height: 20vh;
+    position: relative;
+
+    padding: 25px;
+
+
+    color: rgba(79, 78, 78, 0.836);
+
+    text-align: center;
+
+
+  }
+
+  #fitcont {
+    height: 550px;
+    object-fit: cover;
+  }
+
+
+
+  #margins_orgoals {
+    border-right: 1px solid black;
+  }
+
+
+  @media (max-width:991px) {
+    #navlist {
+      margin-left: -50px;
+    }
+
+    #social {
+      margin-right: 0px;
+    }
+
+
+
+    #fixing {
+      margin-left: 60px;
+    }
+
+    #text {
+      position: absolute;
+      top: -2px;
+    }
+
+    #phnum {
+      display: none;
+    }
+
+    #cial,
+    #can_but {
+      display: none;
+    }
+
+    #fitcont {
+      height: 300px;
+      object-fit: cover;
+    }
+
+
+    #margins_orgoals {
+      border-right: 0px solid rgb(241, 232, 232);
+    }
+  }
+
+
+
+  @media (max-width: 768px) {
+
+    /* Hide on medium devices and above */
+    #toggleMenu {
+      display: block;
+    }
+  }
+
+  @media (min-width: 769px) {
+
+    /* Hide on large devices and above */
+    #toggleMenu {
+      display: none;
+    }
+
+
+
+  }
+
+  /* submenu css */
+
+
+  .submenu {
+    display: none;
+    /* Hide the sub-menu by default */
+    position: absolute;
+    /* Position it absolutely to the parent */
+    background-color: #fff;
+    /* Background color */
+    padding: 10px;
+    /* Padding */
+    border: 1px solid #ccc;
+    /* Border */
+    z-index: 3;
+    /* Ensure it appears above other elements */
+    margin-left: -50px;
+    width: 200px;
+    color: #33383b;
+  }
+
+  /* Show the sub-menu when hovering over the parent */
+  li:hover .submenu {
+    display: block;
+  }
+
+  li:hover {
+    color: #4800ff;
+  }
+
+  /*  */
+
+
+
+
+
+  .footer {
+    background-color: rgb(103, 48, 254);
+    width: 100%;
+    text-align: left;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 50px;
+    margin-top: 1%;
+
+  }
+
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+
+  /* footer left*/
+
+  .footer .footer-left {
+    width: 33%;
+    padding-right: 15px;
+  }
+
+  .footer .about {
+    line-height: 20px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  .footer .about span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .footer .icons {
+    margin-top: 25px;
+  }
+
+  .footer .icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+
+
+  /* footer center*/
+
+  .footer .footer-center {
+    width: 31%;
+  }
+
+  .footer .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+
+  .footer .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+  }
+
+  .footer .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+  }
+
+  .footer .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .footer .footer-center p a {
+    color: #0099ff;
+    text-decoration: none;
+  }
+
+
+  /* footer right*/
+
+  .footer .footer-right {
+    width: 35%;
+  }
+
+  .footer h2 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  .footer h2 span {
+    color: #0099ff;
+  }
+
+  .footer .menu {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+
+  .footer .menu a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .footer .menu a:hover {
+    color: #0099ff;
+  }
+
+  .footer .name {
+    color: #0099ff;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+
+  @media (max-width: 768px) {
+    .footer {
+      font-size: 14px;
+    }
+
+    .footer .footer-left,
+    .footer .footer-center,
+    .footer .footer-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .footer .footer-center i {
+      margin-left: 0;
+    }
+  }
+
+  #cardcrush {
+    height: 550px;
+    background-color: rgb(97, 64, 219);
+  }
+
+  #singlecard {
+    width: 20rem;
+    height: 30rem;
+  }
+
+  #singlecards {
+    width: 20rem;
+    height: 30rem;
+  }
+
+  /*  */
+  @media (max-width: 768px) {
+    #cardcrush {
+      height: 500px;
+    }
+
+    #singlecard {
+      width: 40rem;
+      height: 15rem;
+      display: none;
+    }
+
+    #singlecards {
+      width: 20rem;
+      height: 26.5rem;
+    }
+
+    #imgwth {
+      height: 10rem;
+    }
+
+    .submenu {
+      margin-left: 5px;
+    }
+
+
+  }
+</style>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar " id="soicial">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="">
+        <p style=" color: aliceblue; font-size: 15px;">iatsat@gmail.com</p>
+
+
+
+      </a>
+      <p style=" color: aliceblue; font-size: 15px; margin-left: -500px;" id="phnum">+910090999090</p>
+
+      <ul id="social">
+
+        <li id="so_icon"><a class="navbar-brand" href="#"><i class="fab fa-facebook" style="color: aliceblue;"
+              id="hov"></i></a></li>
+        <li id="so_icon"><a class="navbar-brand" href="#"><i class="fab fa-instagram"
+              style=" color: aliceblue;"></i></a></li>
+        <li id="so_icon"><a class="navbar-brand" href="#"><i class="fa-brands fa-square-x-twitter"
+              style="color: aliceblue;"></i></a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+  <!-- nav cebnter bootstrab -->
+
+
+
+  <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href=" #" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">IATSAT</span>
+      </a>
+      <div class=" flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <button type="button" id="toggleMenu"
+          class="hidden lg:inline-block md:inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Menu</button>
+
+
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+        <ul
+          class="flex flex-col font-medium p-0 md:p-0 mt-0  rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="index.html"
+              class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-blue-300 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-blue-300 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Testimonials</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-blue-300 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blogs</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-blue-300 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-blue-300 md:hover:bg-transparent md:hover:text-blue-700 d:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services
+              <i class="fa-solid fa-caret-down"></i></a>
+            <!-- submenu -->
+            <ul class="submenu">
+              <li style="margin-top: 20px;"><a href="#">PRIORITY RESEARCH AREAS</a></li>
+              <li style="margin-top: 20px;"><a href="campus.html">GLOBAL UNIVERSITY CAMPUS</a></li>
+              <li style="margin-top: 20px;"><a href="page.html">UNLOCKING POTENTIAL</a></li>
+              <li style="margin-top: 20px;"><a href="">IATSAT KNOWLEDGE TECH</a></li>
+              <li style="margin-top: 20px;"><a href="">IATSAT LMS</a></li>
+              <li style="margin-top: 20px;"><a href="">IATSAT VIRTUAL UNIVERSITIES</a></li>
+              <li style="margin-top: 20px;"><a href="">IATSAT OLYMPIAD INTERNATIONAL</a></li>
+              <!-- Add more submenu items as needed -->
+            </ul>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-blue-300 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+              <!-- cnva form  -->
+              <button
+                style="border: 1px solid rgb(18, 19, 19); width: 100px; height: 30px; background-color: rgb(231, 231, 231); border-radius: 50px; "
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"
+                id="contactagency">
+                Contact-Us
+              </button>
+
+              <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                aria-labelledby="staticBackdropLabel" style="background-color:rgb(255, 255, 255);">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="staticBackdropLabel">IATSAT.IN </h5>
+                  <button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div style="font-size: 25px; color: blue; margin-left: 100px;">
+                    CONTACT US
+
+                  </div>
+                  <!-- form of canava -->
+                  <form>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Full name</label>
+                      <input type="Full name" class="form-control" id="exampleInputPassword1"
+                        placeholder="ENTER YOUR NAME" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="ENTER YOUR EMAIL" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Phone number</label>
+                      <input type="Phone number" class="form-control" id="exampleInputPassword1"
+                        placeholder="MOBILE NUMBER" required>
+                    </div>
+
+                    <!-- type writer effect-->
+
+                    <!--  -->
+                    <div class="mb-3 form-check" style="margin-left: 50px;">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                      <label class="form-check-label" for="exampleCheck1">Accept term and condition</label>
+                    </div>
+                    <button type="submit"
+                      style="border: 1px solid dodgerblue; width: 100px; height: 40px; background-color: dodgerblue; border-radius: 50px; margin-left: 100px;">Submit</button>
+                  </form>
+                  <h3 style=" margin-top: 30px; "> For any inquery contact with us team iasat</h3>
+                  <!--  -->
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    document.getElementById('toggleMenu').addEventListener('click', function () {
+      var navbarCta = document.getElementById('navbar-cta');
+      if (navbarCta.style.display === 'none' || navbarCta.style.display === '') {
+        navbarCta.style.display = 'block';
+      } else {
+        navbarCta.style.display = 'none';
+      }
+    });
+  </script>
+
+
+
+  <!--  div nav2 -->
+
+
+
+
+  <nav class="navbar " id="cial">
+    <div class="container-fluid">
+
+
+
+    </div>
+
+    <p style="color: aliceblue; margin-left: 100px; margin-top: -10px;">
+      <marquee>Any Questions Or Inquiries. India office: 125
+        Inderpur Road Mouza Badripur, Dehradun UR - 248012
+        7838397713 ,pr.iatsat@gmail.com</marquee>
+    </p>
+  </nav>
+  <!-- mainnew link -->
+
+
+
+
+
+
+
+  <!-- main end -->
+  <section class="text-gray-600 body-font">
+    <div class=" " >
+      <img class="object-cover object-center rounded" alt="hero" src="58630.jpg"
+        style="width: 100%; height: 400px; object-fit: cover;">
+    </div>
+
+
+    </div>
+  </section>
+
+
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-10 mx-auto">
+      <div class="text-center mb-20">
+        <h1 class="sm:text2-xl text-2xl font-medium text-center title-font text-indigo-700 mb-4">PRIORITY RESEARCH AREAS
+        </h1>
+        <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">Our priority projects will focus on pivotal areas crucial for the progress of humanity.
+
+          Space Exploration: Fostering space research to propel mankind's understanding of the cosmos.
+          </p>
+      </div>
+      
+      
+    </div>
+  </section>
+<!--  -->
+<section class="text-gray-600 body-font overflow-hidden">
+  <div class="container px-5 py-0 mx-auto">
+    <div class="-my-8 divide-y-2 divide-gray-100">
+      <div class="py-8 flex flex-wrap md:flex-nowrap">
+       
+        <div class="md:flex-grow">
+          <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Space Exploration:</h2>
+          <p class="leading-relaxed">Fostering space research to propel mankind's understanding of the cosmos.<br>
+
+           <strong> Advanced Technology: </strong>Promoting the development of cutting-edge technology that pushes the boundaries of human achievement.
+            .</p>
+          
+        </div>
+      </div>
+      <div class="py-8 flex flex-wrap md:flex-nowrap">
+        
+        <div class="md:flex-grow">
+          <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Medicine & Healthcar</h2>
+          <p class="leading-relaxed"> Advancing medical research to improve global health and wellbeing. We are committed to setting up one of the finest Medical College & Research Centers.<br>
+
+           <strong> Manufacturing Innovation:</strong> Making India a global manufacturing hub. We will develop advanced manufacturing processes to improve efficiency and product quality.
+            </p>
+          
+        </div>
+      </div>
+      <div class="py-8 flex flex-wrap md:flex-nowrap">
+        
+        <div class="md:flex-grow">
+          <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Environmental Sustainability</h2>
+          <p class="leading-relaxed"> Leading the charge in environmental studies and solutions for a sustainable future.<br>
+
+          <strong>  Clean Energy:</strong> Pioneering research in clean and sustainable energy sources for a greener planet."
+            .</p>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--  -->
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-10 mx-auto">
+    <div class="text-center mb-20">
+      <h1 class="sm:text1-xl text-2xl font-medium text-center title-font text-indigo-700 mb-4">Want to know more about the Global University & Want to become our partner kindly 
+        Write to us at dir@iatsat.in or call at +917838397713 ( WhatsApp)
+        
+      </h1>
+     
+    </div>
+    
+    
+  </div>
+</section>
+
+
+
+  <!-- footer -->
+
+
+
+  <footer class="footer ">
+    <div class="footer-left col-md-4 col-sm-6 ">
+      <p class="about">
+        <span> About the iatsat.in</span> IATSAT is thrilled to introduce the “Global Principals Associate” (GPA)
+        platform—a distinctive opportunity for directors, principals, and teachers to enhance their skills
+      </p>
+      <div class="icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-google-plus"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-center col-md-4 col-sm-6">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span> Banaras and 156765</span> Dehradun, india</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p> (+91)5645434000</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="#"> iatsat@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right col-md-4 col-sm-6">
+      <h2> IAT<span>SAT</span></h2>
+      <p class="menu">
+        <a href="#"> Home/</a>
+        <a href="#"> About/</a>
+        <a href="#"> News/</a>
+        <a href="#"> Contact/</a>
+      </p>
+      <p class="name"> iatsat &copy; 2024</p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
